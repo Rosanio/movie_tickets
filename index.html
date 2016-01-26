@@ -8,7 +8,51 @@
     <script src="js/bootstrap.min.js"></script>
     <script src ="js/scripts.js"></script>
 </head>
-<body>
-
+<body class="container">
+  <form>
+    <div class="form-group">
+      <label for="movie">Select a Movie</label>
+      <select class="form-control" id="movie">
+        <option value="ing">Inglorious Bastards</option>
+        <option value="joy">Joy</option>
+        <option value="rev">The Revenant</option>
+        <option value="spot">Spotlight</option>
+        <option value="grand">Grand Budapest Hotel</option>
+        <option value="city">City Lights</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="time">Select a Time</label>
+      <select class="form-control" id="time">
+        <option value="1">12:00pm</option>
+        <option value="2">2:20pm</option>
+        <option value="3">3:45pm</option>
+        <option value="4">5:10pm</option>
+        <option value="5">6:50pm</option>
+        <option value="6">9:25pm</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="age">Enter your age</label>
+      <input type="number" id="age">
+    </div>
+    <label>Please select all which you identify with:</label>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="">Male
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="">Female
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="manitee">Manitee
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 </body>
 </html>

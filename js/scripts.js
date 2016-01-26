@@ -7,13 +7,13 @@ function Ticket(movie, time, age, species) {
 
 Ticket.prototype.price = function() {
   var price = 9;
-  var theaterMovies = ["Spotlight", "Sisters", "Carol", "Joy", "The Revenant"];
+  var theaterMovies = ["joy", "rev", "spot"];
   for (var i = 0; i < theaterMovies.length; i++) {
     if (this.movie === theaterMovies[i]) {
       price += 1;
     }
   }
-  if (this.time <= 4) {
+  if (this.time < 4) {
     price -= 1;
   }
   if (this.age <= 10 || this.age >= 65) {
@@ -24,3 +24,7 @@ Ticket.prototype.price = function() {
   }
   return price;
 }
+
+$(document).ready(function() {
+
+});
