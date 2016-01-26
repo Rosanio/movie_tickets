@@ -11,4 +11,14 @@ describe("Ticket",function() {
     var testTicket = new Ticket ("Inglorious Bastards",9,91,"human");
     expect(testTicket.price()).to.equal(7);
   });
+
+  it("will return true if the user does not enter an age", function() {
+    var testTicket = new Ticket ("Inglorious Bastards",9,undefined,"human")
+    expect(testTicket.noAge()).to.equal(true);
+  });
+
+  it("will return true if the user enters a negative age", function() {
+    var testTicket = new Ticket ("Inglorious Bastards",9,-3,"human")
+    expect(testTicket.negAge()).to.equal(true);
+  });
 });

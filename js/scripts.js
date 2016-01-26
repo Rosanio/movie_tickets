@@ -27,6 +27,18 @@ Ticket.prototype.price = function() {
   return price;
 }
 
+Ticket.prototype.noAge = function() {
+  if(isNaN(this.age)) {
+    return true;
+  }
+}
+
+Ticket.prototype.negAge = function() {
+  if (this.age <= 0) {
+    return true;
+  }
+}
+
 $(function() {
   $("form#questions").submit(function(event) {
     var movie = $("select#movie").val();
@@ -37,6 +49,14 @@ $(function() {
       species.push($(this).val());
     });
     var newTicket = new Ticket(movie, time, age, species);
+    if(newTicket.noAge()) {
+      alert('Please enter your age');
+      return false;
+    }
+    if(newTicket.negAge()) {
+      alert("You're not old enough to see this movie. In fact, I'm pretty sure you don't even have eyes!")
+      return false;
+    }
     var price = newTicket.price();
     times = ['12:00pm','2:20pm','3:45pm','5:10pm','6:50pm','9:25pm'];
     var actualTime;
