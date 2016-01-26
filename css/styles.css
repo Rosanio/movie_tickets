@@ -1,3 +1,15 @@
 #price {
   display: none;
 }
+
+#ticket {
+  display: none;
+}
+
+#ticketPrice {
+  font-size: 150px;
+}
+
+.jumbotron {
+  text-align: center;
+}

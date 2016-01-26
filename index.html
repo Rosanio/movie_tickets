@@ -8,17 +8,19 @@
     <script src="js/bootstrap.min.js"></script>
     <script src ="js/scripts.js"></script>
 </head>
+<title>Movie Tickets</title>
 <body class="container">
+  <h1 class="jumbotron">Movie Tickets</h1>
   <form id="questions">
     <div class="form-group">
       <label for="movie">Select a Movie</label>
       <select class="form-control" id="movie">
-        <option value="ing">Inglorious Bastards</option>
-        <option value="joy">Joy</option>
-        <option value="rev">The Revenant</option>
-        <option value="spot">Spotlight</option>
-        <option value="grand">Grand Budapest Hotel</option>
-        <option value="city">City Lights</option>
+        <option value="Inglorious Bastards">Inglorious Bastards</option>
+        <option value="Joy">Joy</option>
+        <option value="The Revenant">The Revenant</option>
+        <option value="Spotlight">Spotlight</option>
+        <option value="Grand Budapest Hotel">Grand Budapest Hotel</option>
+        <option value="City Lights">City Lights</option>
       </select>
     </div>
     <div class="form-group">
@@ -56,9 +58,23 @@
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
-
-  <div id="price">
-    <h3>Your ticket price is $<span class="ticketPrice"></span></h3>
+<hr>
+<div id ="ticket" class="row">
+  <div class="col-md-3">
+    <h2>MLA Theaters</h2>
+    <h4 id="movieName"></h4>
+    <p>Your movie will begin at <span id="movieTime"></span></p>
+    <p>You are <span id="userAge"></span> years old, just fyi</p>
+    <h5>Enjoy the show!</h5>
   </div>
+  <div class="col-md-2">
+    <h2 id="ticketPrice">$<span class='ticketPrice'></span></h2>
+  </div>
+</div>
+
+
+
+
+
 </body>
 </html>

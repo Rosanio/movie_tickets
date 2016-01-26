@@ -7,7 +7,7 @@ function Ticket(movie, time, age, species) {
 
 Ticket.prototype.price = function() {
   var price = 9;
-  var theaterMovies = ["joy", "rev", "spot"];
+  var theaterMovies = ["Joy", "The Revenant", "Spotlight"];
   for (var i = 0; i < theaterMovies.length; i++) {
     if (this.movie === theaterMovies[i]) {
       price += 1;
@@ -38,13 +38,23 @@ $(function() {
     });
     var newTicket = new Ticket(movie, time, age, species);
     var price = newTicket.price();
-    console.log('it works');
-    console.log(species);
+    times = ['12:00pm','2:20pm','3:45pm','5:10pm','6:50pm','9:25pm'];
+    var actualTime;
+    for(var i = 1; i <= times.length; i++) {
+      if(time === i) {
+        actualTime = times[i-1];
+      }
+    }
 
     $(".ticketPrice").text(price);
     $("#price").show();
 
     event.preventDefault();
+
+    $("#movieName").text(movie);
+    $("#movieTime").text(actualTime);
+    $("#userAge").text(age);
+    $("#ticket").show();
   });
 
 });
